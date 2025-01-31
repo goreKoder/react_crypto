@@ -1,22 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-// import './App.css'
+// import { useState } from 'react'
+// import React, { Component } from "react";
+// import "./App.css";
+import AppLayout from "./components/layout/AppLayout";
+import { CryptoContextProvider } from "./context/crypto-context";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <header>
-        <h1>hello veb !!!</h1>
-      </header>
-      <main>
-        <h3>что-то там</h3>
-      </main>
-      
-    </>
-  )
+	return (
+		<CryptoContextProvider>
+			<AppLayout />
+		</CryptoContextProvider>
+	);
 }
 
-export default App
+export default App;
